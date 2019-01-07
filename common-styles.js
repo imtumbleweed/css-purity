@@ -4,7 +4,7 @@ export let absolute = (id, left, top, w, h, z, right, bottom) => {
     // defaults - used to replace missing arguments
     const POSITION = 0;
     const SIZE = 10;
-    const Z = 1;
+    const Z = 1; 
 
     // create a <div> element dynamically
     let div = document.createElement("div");
@@ -35,7 +35,7 @@ export let absolute = (id, left, top, w, h, z, right, bottom) => {
     return div;
 };
 
-// creates a generic block with absolute position
+// creates a column-based CSS grid
 export let grid = (id, columns, x, y, w, h, z) => {
     const DEFAULTPOSITION = 0;
     const DEFAULTSIZE = 10;
@@ -60,6 +60,7 @@ export let grid = (id, columns, x, y, w, h, z) => {
     return div;
 };
 
+// creates a grid item
 export let grid_item = (id, _class, image, z) => {
     const DEFAULTZ = "unset";
     let div = document.createElement("div");
