@@ -1,0 +1,70 @@
+body { margin: 0; } body {overflow:hidden;}
+* { outline: none; }
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;           /* Non-prefixed version, currently
+    not supported by any browser */
+}
+#game { cursor: grab !important; }
+.hidecursor { cursor: none; }
+
+#pad_2 { margin-left: 16px; }
+
+/* Selection */
+
+#selection { pointer-events: none; position: absolute; display: block; z-index: 100000000000; top: 0; left: 0; width: 0; height: 0; border: 1px dashed black; opacity: 0.75; }
+
+/* Toolbars */
+
+#Tools { box-shadow: 0 0 40px #222; }
+
+#Tools div.off, #Tools div.on { cursor: pointer; }
+
+#Tools div img { opacity: 0.7 }
+
+#tools-corner { position: absolute; display: block; bottom: 0; right: 0; width: 22px; height: 22px; background; url("toolscorner.png") no-repeat; }
+#tools-corner:hover { background: url('toolscorner2.png') no-repeat !important; cursor: nwse-resize; }
+
+div.off { border-radius: 3px; border: 1px solid #444; margin: 2px; }
+div.off:hover { border-color: #666; }
+
+.scrubber:hover { background: lime !important; }
+#toolbox { position: absolute; top: 0; right: 0; background: black; width: 360px; height: 100%; padding: 16px; }
+#specimen { position: absolute; top: 100px; left: 100px; width: 400px; height: 30px; border: 1px solid gray; }
+#specimen_corners {
+  position: absolute; top: 38px; left: 30px; width: 290px; height: 250px; border: 5px solid lime;
+  background: conic-gradient(red, yellow, lime, aqua, transparent, magenta, red);
+  /* rgba(255,255,255,0.8) */
+  overflow: hidden;
+}
+
+#specimen_corners:after {
+content: "";
+  background: url("transparent.png");
+  opacity: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+#corners { position: relative; }
+
+#toolbox { z-index: 10000; }
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
