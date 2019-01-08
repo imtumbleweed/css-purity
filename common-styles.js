@@ -4,7 +4,7 @@ export let absolute = (id, left, top, w, h, z, right, bottom) => {
     // defaults - used to replace missing arguments
     const POSITION = 0;
     const SIZE = 10;
-    const Z = 1; 
+    const Z = 1;
 
     // create a <div> element dynamically
     let div = document.createElement("div");
