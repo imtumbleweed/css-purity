@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6400f9ec-2dea-47b1-8734-0a8789fe7965" name="Default Changelist" comment="dsfsdf">
-      <change beforePath="$PROJECT_DIR$/../experiments/username-scrape-tool.php" beforeDir="false" afterPath="$PROJECT_DIR$/../experiments/username-scrape-tool.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../painter.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/common-styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/painter.js" beforeDir="false" afterPath="$PROJECT_DIR$/painter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/slider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/toolbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/view.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +39,7 @@
         <counts>
           <entry key="css" value="1032" />
           <entry key="html" value="529" />
-          <entry key="js" value="25386" />
+          <entry key="js" value="27942" />
           <entry key="txt" value="6" />
         </counts>
       </usages-collector>
@@ -54,7 +47,7 @@
         <counts>
           <entry key="CSS" value="1032" />
           <entry key="HTML" value="529" />
-          <entry key="JavaScript" value="25386" />
+          <entry key="JavaScript" value="27942" />
           <entry key="PLAIN_TEXT" value="6" />
         </counts>
       </usages-collector>
@@ -76,11 +69,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/painter.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="18" selection-start-line="18" selection-end-line="18" />
+                <state relative-caret-position="612">
+                  <caret line="36" column="142" lean-forward="true" selection-start-line="36" selection-start-column="142" selection-end-line="36" selection-end-column="142" />
                 </state>
               </provider>
             </entry>
@@ -106,8 +99,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/common-styles.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="510">
-                  <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+                <state relative-caret-position="119">
+                  <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
                 </state>
               </provider>
             </entry>
@@ -124,8 +117,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/slider.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1564">
-                  <caret line="92" column="49" selection-start-line="92" selection-start-column="49" selection-end-line="92" selection-end-column="49" />
+                <state relative-caret-position="392">
+                  <caret line="142" column="55" lean-forward="true" selection-start-line="142" selection-start-column="55" selection-end-line="142" selection-end-column="55" />
                 </state>
               </provider>
             </entry>
@@ -133,17 +126,17 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/gradient.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+                <state relative-caret-position="170">
+                  <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/view.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="475">
-                  <caret line="249" column="30" lean-forward="true" selection-start-line="249" selection-start-column="30" selection-end-line="249" selection-end-column="30" />
+                <state relative-caret-position="300">
+                  <caret line="248" column="14" selection-start-line="248" selection-start-column="14" selection-end-line="248" selection-end-column="14" />
                 </state>
               </provider>
             </entry>
@@ -166,8 +159,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/view.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="293">
-                      <caret line="237" selection-start-line="237" selection-end-line="237" />
+                    <state relative-caret-position="344">
+                      <caret line="240" column="41" selection-start-line="240" selection-start-column="41" selection-end-line="240" selection-end-column="41" />
                     </state>
                   </provider>
                 </entry>
@@ -193,16 +186,10 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>new Slider</find>
-      <find>spec</find>
-      <find>this.spec</find>
-      <find>disableSelection</find>
-      <find>target</find>
       <find>specimen_id</find>
       <find>this.div.style.top</find>
       <find>this.view.mouse,</find>
       <find>if (valx &gt; boundx) val</find>
-      <find>scrubber</find>
       <find>scrubber,</find>
       <find>console.log(this.currentTool);</find>
       <find>f (valx &gt; boundx) va</find>
@@ -223,6 +210,12 @@
       <find>this.add</find>
       <find>console.log</find>
       <find>y</find>
+      <find>value_width</find>
+      <find>scrubber</find>
+      <find>&quot;sel.w/h</find>
+      <find>sel.w/h</find>
+      <find>now</find>
+      <find>memory.</find>
     </findStrings>
     <replaceStrings>
       <replace>top</replace>
@@ -235,28 +228,30 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/mouse.js" />
-        <option value="$PROJECT_DIR$/gradient.js" />
         <option value="$PROJECT_DIR$/painter.css" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/pad.js" />
         <option value="$PROJECT_DIR$/toolbar.js" />
         <option value="$PROJECT_DIR$/painter.js" />
-        <option value="$PROJECT_DIR$/slider.js" />
         <option value="$PROJECT_DIR$/common-styles.js" />
+        <option value="$PROJECT_DIR$/gradient.js" />
         <option value="$PROJECT_DIR$/view.js" />
+        <option value="$PROJECT_DIR$/slider.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="1399" />
-    <option name="y" value="1111" />
-    <option name="width" value="2253" />
-    <option name="height" value="1042" />
+    <option name="y" value="1065" />
+    <option name="width" value="2249" />
+    <option name="height" value="1088" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
+      <hideEmptyPackages ProjectPane="false" />
+      <sortByType ProjectPane="true" />
+      <foldersAlwaysOnTop value="false" />
     </navigator>
     <panes>
       <pane id="PackagesPane" />
@@ -271,13 +266,14 @@
           </expand>
           <select />
         </subPane>
+        <option name="show-excluded-files" value="false" />
       </pane>
       <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/Ampps/www/painter/toolbar.js" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546730746055" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546914787989" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -316,10 +312,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1399" y="1111" width="2253" height="1042" extended-state="0" />
+    <frame x="1399" y="1065" width="2249" height="1088" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.093023255" />
+      <window_info active="true" id="Project" order="0" visible="true" weight="0.09273641" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -381,24 +377,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="dsfsdf" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/toolbar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pad.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="822">
           <caret line="149" column="31" selection-start-line="149" selection-start-column="31" selection-end-line="149" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/painter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
@@ -412,31 +394,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gradient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/slider.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1564">
-          <caret line="92" column="49" selection-start-line="92" selection-start-column="49" selection-end-line="92" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/painter.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="397">
           <caret line="34" column="48" selection-start-line="34" selection-start-column="48" selection-end-line="34" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common-styles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -447,10 +408,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gradient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toolbar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-styles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/view.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="249" column="30" lean-forward="true" selection-start-line="249" selection-start-column="30" selection-end-line="249" selection-end-column="30" />
+        <state relative-caret-position="300">
+          <caret line="248" column="14" selection-start-line="248" selection-start-column="14" selection-end-line="248" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/slider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="142" column="55" lean-forward="true" selection-start-line="142" selection-start-column="55" selection-end-line="142" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/painter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="142" lean-forward="true" selection-start-line="36" selection-start-column="142" selection-end-line="36" selection-end-column="142" />
         </state>
       </provider>
     </entry>
