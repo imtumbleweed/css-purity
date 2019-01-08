@@ -246,7 +246,7 @@ export class View {
             }
 
             if (this.disableSelection) return;
-            console.log("sel.w/h", [this.sel.width, this.sel.height]);
+            //console.log("sel.w/h", [this.sel.width, this.sel.height]);
             this.sel.width = Math.abs(this.mouse.difference.x);
             this.sel.height = Math.abs(this.mouse.difference.y);
             if (this.mouse.current.x < this.mouse.memory.x) { this.sel.x = this.mouse.inverse.x; } // swap x
