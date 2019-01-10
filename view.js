@@ -76,7 +76,6 @@ export class View {
         let e = absolute("element_" + this.all().length, x, y, w, h, this.z++);
 
         if (transform) e.style.transform = transform; // copy transforms
-        if (background) e.style.background = background; // copy background
         if (border) e.style.border = border; // copy border
 
         if (radius) {
@@ -86,13 +85,34 @@ export class View {
             e.style.borderBottomRightRadius = radius[3];
         }; // copy border radius
 
+        // calculate true length
+
+        let len = 0;
+        for (var i = 0; i < window.grid.percents.length; i++, len++)
+            if (window.grid.percents[len] == -1)
+                break;
+
+                // console.log("true length = " + len);
+
+/*
+        // add gradient attributes to the newly created element
+        e.setAttribute("data-gradient-length", len);
+
+        for (let i = 0; i < len; i++) {
+            e.setAttribute("data-gradient-" + i, window.grid.colors[i]);
+            e.setAttribute("data-gradient-percent-" + i, window.grid.percents[i]);
+        }
+        */
+
         e.addEventListener("mouseup", (e) => {
             //this.isDragging = false;
             //e.target.setAttribute("data-can-drag", 0);
             //e.target.setAttribute("data-selected", 0);
         });
 
+        // Select element
         e.addEventListener("mousedown", (e) => {
+
             if (this.toolbar.toolbar.currentTool == 0) {
 
                 this.all().map((object, index)=>{
@@ -107,7 +127,40 @@ export class View {
                 //e.target.style.border = "1px solid gray";
                 e.target.borderColor = "green";
                 //this.isDragging = true;
-                this.selectedElement = e.target;
+
+                // grab currenty selected element
+                window.selectedElement = this.selectedElement = e.target;
+
+                window.grid.reset(false); // reset, but don't update (or it'll trigger apply to selected element AGAIN, which we need to avoid here.)
+
+                // When an element is clicked, we need to copy its gradient and corners into gradient and toolbox corner editor
+                // This way we don't apply current gradient / corners to the selected element when they start changing
+                // Instead, the tools are updated first.
+                let len = e.target.getAttribute("data-gradient-length");
+                let gradient_code = "90deg";
+                if (len) {
+                    for (let i = 0; i < len; i++) {
+                        let percent = e.target.getAttribute("data-gradient-percent-" + i);
+                        let color = e.target.getAttribute("data-gradient-" + i);
+                        gradient_code += ", " + color + " " + percent + "%";
+                        // re-add knobs to gradient controller
+                        let depercentify = parseInt((percent * grid.width) / 100);
+                        window.grid.addslice(depercentify, 0);
+                        window.grid.colors[i] = color;
+                        window.grid.percents[i] = percent;
+                    }
+                }
+
+                document.getElementById("dimensions").style.background = "linear-gradient(" + gradient_code + ")";
+
+                //
+
+                //console.log(window.grid.colors.length);
+                //console.log(window.grid.colors);
+                //console.log(window.grid.percents);
+
+                // expose globally for gradient tool
+
             }
         });
 
@@ -130,7 +183,7 @@ export class View {
         e.setAttribute("data-selected", "0");
         e.style.overflow = "hidden";
         //e.style.border = "1px solid gray";
-        if (!background && background != undefined) e.style.background = "black";
+        //if (!background && background != undefined) e.style.background = "black";
         e.style.color = "#555";
         e.style.fontSize = "48px";
         e.style.fontFamily = "Arial";
@@ -138,6 +191,8 @@ export class View {
         e.style.lineHeight = h + "px";
         e.style.cursor = "pointer";
         e.innerHTML = "Specimen";
+
+        if (background) e.style.background = background; // copy background
 
         document.getElementById("View").appendChild( e );
 
@@ -194,46 +249,64 @@ export class View {
                 this.delete_selected();
         });
 
+        // Mouse pressed on main view stage
         this.div.addEventListener("mousedown", (e) => {
-            if (this.disableSelection) return;
+
+            if (this.disableSelection)
+                return;
+
             this.imDrawing = true;
+
             // select or drag tool is chosen
             if (this.selectedElement && this.toolbar.toolbar.currentTool == 0 || this.toolbar.toolbar.currentTool == 1) {
                 this.memory.x = parseInt(this.selectedElement.style.left);
                 this.memory.y = parseInt(this.selectedElement.style.top);
+
                 // start dragging selected element
                 if (this.selectedElement)
                     if (this.selectedElement.getAttribute("data-can-drag") == 1)
                         this.isDragging = true;
             }
+
             // only if selection tool is selected
             if (this.toolbar.toolbar.currentTool == 2)
                 this.selection.status = true;
+
             this.sel.x = this.mouse.current.x;
             this.sel.y = this.mouse.current.y;
             this.sel.width = 0;
             this.sel.height = 0;
             // remove selection class from all elements
         });
+
+        // Mouse released, complete the selection
         this.div.addEventListener("mouseup", (e) => {
-           if (this.disableSelection) return;
+
+           if (this.disableSelection)
+               return;
+
            this.imDrawing = false;
            this.isDragging = false;
            this.selection.status = false;
 
-           console.log([this.sel.width,this.sel.height]);
-
            // add new element to view
-           if (this.toolbar.toolbar.currentTool == 2)
-               this.add(this.sel.x, this.sel.y, this.sel.width, this.sel.height, null, null, null, "1px solid red");
-           //this.mouse.difference.x = 0;
-           //this.mouse.difference.y = 0;
+           if (this.toolbar.toolbar.currentTool == 2) {
+
+               // grab gradient from the toolbox
+               let bg = document.getElementById("specimen_corners").style.background;
+
+               // add new element to stage
+               this.add(this.sel.x, this.sel.y, this.sel.width, this.sel.height, null, bg, null, "1px solid blue");
+           }
+
            // reset selection box
            this.element.style.left = 0;
            this.element.style.top = 0;
            this.element.style.width = 0;
            this.element.style.height = 0;
         });
+
+        // Drag selected object
         this.div.addEventListener("mousemove", (e) => {
 
             if (this.isDragging) { // Drag selected element

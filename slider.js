@@ -194,7 +194,8 @@ export class Slider {
 
         if (this.specimen) {
 
-          this.specimen.style.background = "conic-gradient(white, silver, white, silver, white, transparent, white, silver)";
+          this.specimen.style.background = document.getElementById("specimen_corners").style.background;
+          //"conic-gradient(white, silver, white, silver, white, transparent, white, silver)";
 
           if (this.name == "angle") { this.specimen.setAttribute("data-rotate", val); let s = this.specimen.getAttribute("data-scale"); this.specimen.style.transform = "rotate(" + val + "deg) scale(" + s + ")"; }
           if (this.name == "width") this.specimen.style.width = val + "px";
@@ -213,6 +214,8 @@ export class Slider {
             if (this.name == "rc_8") { orc[7] = val*2 + "px"; }
 
             // update all oval_rounded_corners
+            //this.specimen_corners.style.borderRadius = orc[0] + "% " + orc[2] + "% " + orc[4] + "% " + orc[6] + "/" + orc[1] + "% " + orc[3] + "% " + orc[5] + "% " + orc[7];
+            //console.log(this.specimen_corners.style.borderRadius);
             this.specimen_corners.style.borderTopLeftRadius = this.specimen.style.borderTopLeftRadius = orc[0] + " " + orc[1];
             this.specimen_corners.style.borderTopRightRadius = this.specimen.style.borderTopRightRadius = orc[2] + " " + orc[3];
             this.specimen_corners.style.borderBottomLeftRadius = this.specimen.style.borderBottomLeftRadius = orc[4] + " " + orc[5];
